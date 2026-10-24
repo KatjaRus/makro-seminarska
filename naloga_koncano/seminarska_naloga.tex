@@ -24,21 +24,31 @@
 % TABELE, SLIKE IN GRAFI
 % --------------------------------------------------
 \usepackage{array}
+
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
 \usepackage{booktabs}
+
+% Omogoča vstavljanje slik
 \usepackage{graphicx}
+
+% LaTeX bo slike iskal v tej mapi
 \graphicspath{{slike/}}
+
+% Omogoča, da sliko postavimo natanko na določeno mesto z [H]
+\usepackage{float}
+
+% Prepreči, da bi slike odplavale v naslednje podpoglavje
+\usepackage{placeins}
+
+% Grafi s paketom pgfplots
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
+
+% Seznami
 \usepackage{enumitem}
 \setlist[itemize]{itemsep=0.2em,topsep=0.3em}
-
-% --------------------------------------------------
-% POVEZAVE
-% --------------------------------------------------
-\usepackage{xurl}
-\usepackage[hidelinks]{hyperref}
 
 % --------------------------------------------------
 % CITIRANJE
@@ -47,11 +57,16 @@
 \addto\captionsslovene{\renewcommand{\refname}{Viri}}
 
 % --------------------------------------------------
+% POVEZAVE
+% --------------------------------------------------
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+
+% --------------------------------------------------
 % ODSTAVKI
 % --------------------------------------------------
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0.7em}
-
 % --------------------------------------------------
 % NASLOV
 % --------------------------------------------------
@@ -558,7 +573,51 @@ Pri razlagi testa moramo biti previdni: zahtevani donos je donos kapitala po od�
 
 Osnovni model predpostavlja, da lahko podjetje kapital kadar koli proda. Tu pa velja, da je del investicije pogosto izgubljen (angl. \textit{sunk cost}), zato se podjetje lahko znajde v položaju $F'(K) < r + \delta$: kapitala je preveč, a ga ne more prodati (prosojnica 41). To je pri UI pomembno, ker se specializirani procesorji težko preprodajo po prvotni vrednosti. Primerjava z optičnimi vlakni ob koncu devetdesetih let kaže razliko: tudi tam je bilo naložb preveč, a je kapital z nizko amortizacijo obstal in so ga izkoristili drugi. Pri GPU z visokim $\delta$ napačna ocena povpraševanja pomeni hitro izgubo vrednosti, zato je tveganje preinvestiranja večje.
 
+```latex
+% ==================================================
+\section{Uporaba podatkov, kritična presoja in zaključek}
+\label{sec:podatki}
+% ==================================================
 
+\subsection{Kaj kažejo podatki}
+
+V prejšnjih poglavjih smo predstavili model najemnega stroška kapitala, Tobinov $q$ ter povezavo med investicijami in produktivnostjo. V nadaljevanju te ugotovitve primerjamo s podatki o podjetjih Amazon, Microsoft, Alphabet in Meta.
+
+Kapitalski izdatki obravnavanih podjetij so se v zadnjih letih hitro povečevali. Leta 2023 so znašali približno 155 milijard dolarjev, leta 2024 približno 251 milijard dolarjev, leta 2025 približno 410 milijard dolarjev, za leto 2026 pa so napovedani izdatki v višini približno 730 milijard dolarjev \citep{ValueAddVC,Forbes2026,Platformonomics2025,Platformonomics2026}. V ta znesek niso vključene samo naložbe v umetno inteligenco, temveč tudi druga infrastruktura, zato ga ni mogoče v celoti pripisati UI.
+
+Kapitalski izdatki so rasli bistveno hitreje kot prihodki. Medtem ko se je indeks kapitalskih izdatkov do leta 2026 povečal na več kot petkratno izhodiščno vrednost, se je indeks prihodkov približal dvakratni vrednosti. To kaže, da morajo podjetja za upravičenje sedanjih naložb v prihodnosti ustvariti zelo visoke dodatne prihodke. Takšna razlika sicer ne dokazuje nerentabilnosti investicij, vendar opozarja na povečano tveganje.
+
+Po modelu najemnega stroška kapitala bi investicije v višini približno 730 milijard dolarjev zahtevale letni donos med 180 in 338 milijardami dolarjev. Razpon je odvisen predvsem od predpostavljene življenjske dobe opreme in njenega tehnološkega zastarevanja. Prihodki oblačnih storitev so sicer visoki, vendar jih ni mogoče enačiti s prihodki iz UI ali z dobičkom. Poleg tega je treba upoštevati stroške energije, hlajenja, zaposlenih, vzdrževanja in amortizacije.
+
+Napovedi kažejo tudi na velik potencial rasti trga umetne inteligence v ZDA. Po projekcijah naj bi njegova vrednost znašala približno 173,56 milijarde dolarjev leta 2025, 201,01 milijarde dolarjev leta 2026 in 976,23 milijarde dolarjev leta 2035. Vendar velikost celotnega trga ni enaka prihodkom ali dobičku obravnavanih podjetij. Primerjava z modelskim razponom zato ne dokazuje donosnosti investicij, temveč ponazarja velikost prihodkov, ki bi bili potrebni za njihovo upravičenje.
+
+Tobinov $q$, ki ga v nalogi približamo z razmerjem med tržno in knjigovodsko vrednostjo podjetja, je pri velikih tehnoloških podjetjih razmeroma visok. Vrednost $q > 1$ lahko kaže, da vlagatelji pričakujejo prihodnjo rast in zato podpirajo nadaljnje investicije. Vendar visoka tržna vrednost še ne dokazuje, da so trenutne naložbe že donosne. Vključuje lahko tudi pričakovanja glede prihodnjih prihodkov ter vrednost neopredmetenega kapitala, kot so podatki, algoritmi in znanje zaposlenih.
+
+Tudi podatki o produktivnosti za zdaj ne kažejo nedvoumnega preobrata. Po podatkih Federal Reserve Bank of San Francisco je rast skupne faktorske produktivnosti (TFP) v ZDA od leta 2023 znašala približno 0,7\,\% letno, v obdobju 2005--2022 pa približno 0,5\,\% letno. To je izboljšanje, vendar precej manj od približno 2\,\% letne rasti med letoma 1996 in 2004 \citep{SFFedViews2026}. Učinki UI na produktivnost se lahko pokažejo z zamikom, zato trenutni podatki še ne omogočajo dokončnega sklepa.
+
+\subsection{Kritična presoja}
+
+Rezultate je treba razlagati ob upoštevanju več omejitev.
+
+Prvič, prihodki niso enaki donosom. Prihodki oblačnih storitev ne kažejo neposredno dobička iz UI, saj ne vključujejo vseh stroškov poslovanja. Primerjava je zato predvsem primerjava velikostnih redov in ne natančen izračun donosnosti.
+
+Drugič, rezultati so odvisni od predpostavk. Ocenjeni zahtevani donos je odvisen od življenjske dobe opreme, stroškov kapitala in hitrosti tehnološkega zastarevanja. Poleg tega vsi kapitalski izdatki niso povezani z UI, zato celotnega zneska investicij ni mogoče neposredno primerjati s prihodki iz te tehnologije.
+
+Tretjič, Tobinov $q$ je v naši analizi le približek. Razmerje med tržno in knjigovodsko vrednostjo vključuje pričakovanja vlagateljev in neopredmeteni kapital, zato ne meri neposredno donosnosti posamezne investicije.
+
+Četrtič, investicije imajo tudi strateški namen. Podjetja vlagajo v UI zaradi ohranjanja konkurenčnega položaja, razvoja novih storitev in zagotavljanja dostopa do računske infrastrukture. Kratkoročni finančni donos zato ni edino merilo pri odločanju.
+
+Nazadnje se lahko učinki UI na produktivnost pokažejo šele čez več let. Trenutno skromna rast TFP še ne pomeni, da UI dolgoročno ne bo povečala produktivnosti. Hkrati pa prihodnjih koristi ni mogoče potrditi samo na podlagi hitre rasti investicij.
+
+\subsection{Zaključek}
+
+V nalogi smo preučevali, ali pričakovani donosi investicij v umetno inteligenco upravičujejo sedanji obseg naložb podjetij Amazon, Microsoft, Alphabet in Meta v obdobju 2022--2026.
+
+Analiza kaže, da kapitalski izdatki rastejo bistveno hitreje kot prihodki. Po modelu najemnega stroška kapitala bi investicije v višini približno 730 milijard dolarjev zahtevale letni donos med 180 in 338 milijardami dolarjev. Trenutni podatki o prihodkih oblačnih storitev, velikosti trga UI in produktivnosti tega donosa še ne potrjujejo. Visok Tobinov $q$ kaže na velika pričakovanja vlagateljev, vendar ne dokazuje trenutne donosnosti investicij.
+
+Sklep je, da ekonomske upravičenosti sedanjega obsega investicij za zdaj ni mogoče empirično potrditi, vendar je tudi ni mogoče dokončno zavrniti. Končna uspešnost bo odvisna od tega, ali bodo podjetja drago infrastrukturo uspela pretvoriti v trajne prihodke, zadosten dobiček in dolgoročno rast produktivnosti.
+
+\FloatBarrier
 
 % ==================================================
 % VIRI (vsi viri so v datoteki viri.bib)

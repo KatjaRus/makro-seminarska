@@ -435,8 +435,139 @@ Pri GPU z visokim $\delta$ napačna ocena povpraševanja pomeni hitro izgubo vre
 \end{frame}
 
 
+
 % ==================================================
-% ZAKLJUČEK  (prosojnice za zaključek pridejo sem)
+% 4. UPORABA PODATKOV, KRITIČNA PRESOJA IN ZAKLJUČEK
 % ==================================================
+
+\section{Podatki in zaključek}
+
+% --------------------------------------------------
+\begin{frame}{Kapitalski izdatki rastejo hitreje kot prihodki}
+
+\begin{center}
+    \includegraphics[width=0.88\textwidth]{hyperscaler_capex_revenue.png}
+\end{center}
+
+\vspace{-0.2cm}
+
+\begin{columns}[T]
+    \column{0.48\textwidth}
+    \centering
+    {\Large\textbf{Več kot 5-krat}}
+    
+    \small
+    Rast indeksa kapitalskih izdatkov
+
+    \column{0.48\textwidth}
+    \centering
+    {\Large\textbf{Približno 2-krat}}
+    
+    \small
+    Rast indeksa prihodkov
+\end{columns}
+
+\vspace{0.25cm}
+
+\begin{alertblock}{Ključno sporočilo}
+Investicije rastejo bistveno hitreje kot prihodki, zato je vprašanje njihove prihodnje donosnosti vse pomembnejše.
+\end{alertblock}
+
+\end{frame}
+
+
+% --------------------------------------------------
+\begin{frame}{Kolikšen donos zahtevajo investicije?}
+
+\begin{center}
+    {\Large\textbf{730 milijard USD}}
+    
+    \small
+    Ocenjeni obseg kapitalskih izdatkov
+\end{center}
+
+\vspace{0.4cm}
+
+\begin{center}
+\begin{tikzpicture}
+    \draw[fill=blue!15, draw=blue!60!black, rounded corners]
+        (0,0) rectangle (5.2,1.25);
+    \node[align=center] at (2.6,0.62)
+        {\Large\textbf{180--338 mrd USD}\\
+        \small Zahtevani letni donos};
+
+    \draw[->, thick] (5.45,0.62) -- (6.2,0.62);
+
+    \draw[fill=yellow!25, draw=orange!70!black, rounded corners]
+        (6.45,0) rectangle (11.5,1.25);
+    \node[align=center] at (8.98,0.62)
+        {\textbf{Prihodki niso dobiček}\\
+        \small Upoštevati je treba tudi stroške};
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.35cm}
+
+\begin{itemize}
+    \item Rezultat je odvisen od življenjske dobe opreme in stroška kapitala.
+    \item Del investicij ni namenjen izključno umetni inteligenci.
+\end{itemize}
+
+\end{frame}
+
+
+% --------------------------------------------------
+\begin{frame}{Kritična presoja: kaj moramo upoštevati?}
+
+\begin{columns}[T]
+    \column{0.31\textwidth}
+    \begin{block}{1. Prihodki}
+        Prihodki iz oblačnih storitev niso enaki dobičku iz UI.
+    \end{block}
+
+    \column{0.31\textwidth}
+    \begin{block}{2. Predpostavke}
+        Krajša življenjska doba opreme pomeni višji zahtevani donos.
+    \end{block}
+
+    \column{0.31\textwidth}
+    \begin{block}{3. Pričakovanja}
+        Visok Tobinov $q$ ne zagotavlja uspešnosti investicij.
+    \end{block}
+\end{columns}
+
+\vspace{0.45cm}
+
+\begin{alertblock}{Pomembna omejitev}
+Učinki UI na produktivnost se lahko pokažejo z zamikom, zato trenutni podatki še niso dokončni.
+\end{alertblock}
+
+\end{frame}
+
+
+% --------------------------------------------------
+\begin{frame}{Zaključek: ali so investicije upravičene?}
+
+\begin{center}
+    \Large
+    \textbf{Za zdaj donosnosti še ne moremo potrditi.}
+\end{center}
+
+\vspace{0.35cm}
+
+\begin{enumerate}
+    \item Kapitalski izdatki rastejo hitreje kot prihodki.
+    \item Investicije zahtevajo zelo visoke prihodnje donose.
+    \item Tobinov $q$ kaže velika pričakovanja, ne pa zagotovljenega uspeha.
+\end{enumerate}
+
+\vspace{0.4cm}
+
+\begin{block}{Končni sklep}
+Investicij ne moremo niti dokončno upravičiti niti zavrniti. Ključno bo, ali bodo podjetja infrastrukturo za UI pretvorila v trajne prihodke, dobiček in rast produktivnosti.
+\end{block}
+
+\end{frame}
+
 
 \end{document}
