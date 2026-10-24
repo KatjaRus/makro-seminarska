@@ -1,0 +1,23 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[slovene]{babel}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\usepackage[round,authoryear]{natbib}
+\addto\captionsslovene{\renewcommand{\refname}{Viri}}
+
+\setlength{\parindent}{0pt}
+\setlength{\bibsep}{4pt}
+
+\begin{document}
+
+% prikaži vse vire iz viri.bib
+\nocite{*}
+
+\bibliographystyle{plainnat}
+\bibliography{viri}
+
+\end{document}

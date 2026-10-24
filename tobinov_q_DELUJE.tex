@@ -1,0 +1,410 @@
+\documentclass[12pt,a4paper]{article}
+
+
+
+% --------------------------------------------------
+
+% JEZIK IN KODIRANJE
+
+% --------------------------------------------------
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[T1]{fontenc}
+
+\usepackage[slovene]{babel}
+
+
+
+% --------------------------------------------------
+
+% POSTAVITEV STRANI
+
+% --------------------------------------------------
+
+\usepackage[a4paper,margin=2.5cm]{geometry}
+
+\usepackage{setspace}
+
+\onehalfspacing
+
+
+
+% --------------------------------------------------
+
+% MATEMATIKA
+
+% --------------------------------------------------
+
+\usepackage{amsmath}
+
+\usepackage{amssymb}
+
+
+
+% --------------------------------------------------
+
+% TABELE IN GRAFI
+
+% --------------------------------------------------
+
+\usepackage{booktabs}
+
+\usepackage{graphicx}
+
+\usepackage{pgfplots}
+
+\pgfplotsset{compat=1.18}
+
+
+
+% --------------------------------------------------
+
+% POVEZAVE
+
+% --------------------------------------------------
+
+\usepackage[hidelinks]{hyperref}
+
+
+
+% --------------------------------------------------
+
+% CITIRANJE
+
+% --------------------------------------------------
+
+\usepackage[round,authoryear]{natbib}
+
+
+
+% --------------------------------------------------
+
+% ODSTAVKI
+
+% --------------------------------------------------
+
+\setlength{\parindent}{0pt}
+
+\setlength{\parskip}{0.7em}
+
+
+
+% --------------------------------------------------
+
+% NASLOV
+
+% --------------------------------------------------
+
+\title{\textbf{Tobinov q kot razmerje med tržno vrednostjo in nadomestitveno vrednostjo}}
+
+\author{}
+
+\date{}
+
+
+
+\begin{document}
+
+
+
+\maketitle
+
+
+
+% ==================================================
+
+\section{Opredelitev Tobinovega q}
+
+% ==================================================
+
+
+
+Tobinov q je ekonomski kazalnik, ki povezuje \textbf{tržno vrednost podjetja oziroma njegovega kapitala z nadomestitvenimi stroški tega kapitala}. Njegov osnovni namen je pokazati, kako je vrednost kapitala, kot jo ocenjuje trg, primerljiva s stroškom, ki bi bil potreben za ponovno vzpostavitev oziroma nadomestitev tega kapitala. V najpreprostejši obliki ga lahko zapišemo kot:
+
+
+
+\begin{equation}
+q = \frac{\text{tržna vrednost kapitala}}{\text{nadomestitvena vrednost kapitala}}.
+\end{equation}
+
+
+
+Pri tem je pomembno razlikovati med \textbf{povprečnim q} in \textbf{mejnim oziroma marginalnim q}. Povprečni q primerja celotno tržno vrednost podjetja oziroma njegovega kapitala s celotno nadomestitveno vrednostjo kapitala. Mejni q pa primerja vrednost \emph{dodatne enote kapitala} z njenim nadomestitvenim stroškom. Prav mejni q je v teoretičnem modelu pomemben za odločanje o novih investicijah. Hayashijeva formalizacija pokaže, da je pod določenimi predpostavkami mogoče marginalni q povezati s povprečnim q, ki ga je v praksi precej lažje opazovati \citep{AndreiMannMoyen2017,PetersTaylor2016}.
+
+
+
+Logika kazalnika je relativno preprosta. Če je $q>1$, je tržna vrednost kapitala višja od stroška njegove nadomestitve. To pomeni, da trg podjetju oziroma njegovemu kapitalu pripisuje višjo vrednost, kot bi znašal strošek ustvarjanja primerljivega kapitala. V osnovnem investicijskem modelu to ustvarja spodbudo za dodatne investicije. Če je $q<1$, je situacija obrnjena: tržna vrednost kapitala je nižja od njegove nadomestitvene vrednosti, zato je ekonomska spodbuda za ustvarjanje dodatnega kapitala šibkejša. Pri $q \approx 1$ je tržna vrednost kapitala približno enaka strošku njegove nadomestitve.
+
+
+
+Zato lahko Tobinov q razumemo kot \textbf{formalno povezavo med vrednotenjem kapitala in investicijsko odločitvijo}. Ne pove neposredno, ali bo neka investicija uspešna, ampak omogoča primerjavo med vrednostjo, ki jo kapital ustvarja oziroma ji jo pripisuje trg, in stroškom njegovega ustvarjanja.
+
+
+
+Pri tem je pomembno, da Tobinov q ni enak klasičnemu računovodskemu kazalniku donosnosti. Ne meri neposredno dobička na vloženi evro in tudi ne predstavlja klasičnega kazalnika ROI. Njegova posebnost je v tem, da na eni strani uporablja \textbf{tržno vrednost}, na drugi pa \textbf{nadomestitveno vrednost kapitala}. V literaturi se Tobinov q zato uporablja kot merilo investicijskih priložnosti podjetja \citep{PetersTaylor2016}.
+
+
+
+\begin{table}[htbp]
+
+\centering
+
+\caption{Osnovna interpretacija Tobinovega q}
+
+\label{tab:interpretacija_q}
+
+\begin{tabular}{p{3cm}p{10cm}}
+
+\toprule
+
+\textbf{Vrednost q} & \textbf{Interpretacija} \\\\
+
+\midrule
+
+$q>1$ &
+
+Tržna vrednost kapitala je višja od nadomestitvenega stroška, zato obstaja večja ekonomska spodbuda za nove investicije. \\\\
+
+
+
+$q\approx1$ &
+
+Tržna vrednost kapitala je približno enaka nadomestitvenemu strošku. \\\\
+
+
+
+$q<1$ &
+
+Tržna vrednost kapitala je nižja od nadomestitvenega stroška, zato je spodbuda za nove investicije šibkejša. \\\\
+
+\bottomrule
+
+\end{tabular}
+
+\end{table}
+
+
+
+
+
+% ==================================================
+
+\section{Povezava Tobinovega q z investicijami}
+
+% ==================================================
+
+
+
+Povezava med $q$ in investicijami izhaja iz vprašanja, ali se podjetju splača povečati svoj kapital (kapital je vse, kar podjetje uporablja za proizvodnjo dobrin ali storitev in kar mu omogoča ustvarjanje prihodnjih prihodkov). Če pričakovana vrednost, ki jo podjetju prinese dodatna enota kapitala, presega strošek njene pridobitve, je investicija za podjetje ekonomsko smiselna.
+
+
+
+To lahko ponazorimo na primeru podjetja \textbf{Amazon}. Amazon je imel konec leta 2025 približno \textbf{818 milijard dolarjev sredstev}, medtem ko je bila njegova tržna vrednost približno \textbf{2,47 bilijona dolarjev}.
+
+
+
+Če za poenostavljen približek uporabimo razmerje med tržno vrednostjo podjetja in vrednostjo njegovih sredstev, dobimo:
+
+
+
+\begin{equation}
+q = \frac{2.470}{818} \approx 3,02.
+\end{equation}
+
+
+
+Torej je $q$ večji od 1. To pomeni, da je bila tržna vrednost Amazona približno trikrat višja od vrednosti njegovih bilančnih sredstev. Visoka vrednost $q$ lahko kaže, da trg podjetju pripisuje pomembno prihodnjo vrednost, ki ni v celoti zajeta v njegovi obstoječi fizični in računovodsko izkazani osnovi kapitala.
+
+
+
+Za primerjavo lahko pogledamo \textbf{Delta Air Lines}. Konec leta 2025 je imela Delta približno \textbf{81,3 milijarde dolarjev sredstev}, njena tržna vrednost pa je znašala približno \textbf{45,3 milijarde dolarjev}.
+
+
+
+V tem primeru dobimo:
+
+
+
+\begin{equation}
+q = \frac{45,3}{81,3} \approx 0,56.
+\end{equation}
+
+
+Torej je $q$ manjši od 1. V tem primeru je bila tržna vrednost podjetja nižja od vrednosti njegovih bilančnih sredstev, kar kaže na precej bolj zadržano tržno vrednotenje podjetja.
+
+V prvem primeru je razmerje med tržno vrednostjo in vrednostjo kapitala \textbf{višje od 1}, medtem ko je v drugem primeru \textbf{nižje od 1}.
+Pri Tobinovem q je zato pomembna predvsem \textbf{mejna vrednost kapitala}. Podjetje se ne odloča samo na podlagi tega,
+koliko je vreden njegov obstoječi kapital, temveč predvsem na podlagi tega, kakšno vrednost bo ustvarila dodatna investicija.
+
+%Teorija q investicij predpostavlja povezavo med tržno vrednostjo podjetij in njihovo investicijsko aktivnostjo. 
+
+Hayashijeva formalizacija je pomembna zato, ker pokaže, pod katerimi pogoji je  marginalni q možno povezati s povprečnim q,
+ki ga je  empirično lažje izračunati (marginalni q je tudi bolj relevanten če se podjetje sprašuje o tem ali naj naredi novo investicijo).
+\citep{AndreiMannMoyen2017}.
+
+To je posebej pomembno pri novih tehnologijah. Pri tehnologiji, kot je umetna inteligenca, investicije niso
+omejene samo na nakup fizične opreme. Potrebni so tudi podatkovni centri, računalniška oprema, čipi, programska oprema,
+podatki, raziskave in razvoj ter znanje zaposlenih. Zato je težje primerjati vrednost kapitala investiranega v AI podjetje, 
+kot pa vrednost klasičnega fizičnega kapitala nekega naprimer gradbenega podjetja.
+
+%Zato je pri AI težje določiti natančno nadomestitveno vrednost kapitala
+
+%Tu je mišljeno predvsem primerjava med AI-kapitalom in klasičnimi fizičnimi sredstvi podjetja.
+
+
+
+Prav tukaj se pojavi ena izmed pomembnih omejitev uporabe Tobinovega q pri umetni inteligenci.
+
+
+
+
+
+% ==================================================
+
+\section{Tobinov q in investicije v razvoj umetne inteligence}
+
+% ==================================================
+
+Naša osrednja tema je vprašanje \textit{»Investicije v razvoj umetne inteligence: ali so pričakovanja donosov upravičena?«}
+Tobinov q nam pri tem omogoča preučevati, ali je visoka tržna vrednost podjetij, ki veliko vlagajo v AI, skladna z vrednostjo njihovega kapitala.
+
+V zadnjih letih so investicije v umetno inteligenco hitro naraščale. Stanfordov AI Index 
+za leto 2026 ugotavlja, da je globalna zasebna investicija v AI leta 2025 dosegla približno 
+344,66 milijarde USD, pri čemer je bila rast posebej izrazita pri generativni umetni 
+inteligenci \citep{StanfordAIIndex2026}. OECD hkrati ugotavlja, da so podjetja, povezana 
+z AI infrastrukturo in gostovanjem, leta 2025 prejela približno 109,3 milijarde USD 
+tveganega kapitala \citep{OECD2026}.
+
+Tako velike investicije postavljajo vprašanje, ali bo prihodnja ekonomska vrednost 
+
+AI dovolj velika, da bo upravičila stroške njenega ustvarjanja. \textbf{Visok Tobinov q sam po sebi še ne pomeni, da bodo investicije donosne}, temveč kaže, da trg kapitalu 
+pripisuje visoko vrednost glede na njegovo nadomestitveno vrednost. Če se bodo prihodnji 
+prihodki in produktivnost dovolj povečali, se lahko visoko vrednotenje upraviči, sicer pa 
+lahko pride do padca tržne vrednosti.
+
+Pomemben del teh investicij predstavljajo tudi podatkovni centri. Federal Reserve 
+ugotavlja, da je bila rast poslovnih fiksnih investicij v ZDA v veliki meri povezana 
+z izgradnjo infrastrukture za podporo storitvam umetne inteligence, vključno z 
+investicijami v opremo in programsko opremo \citep{FederalReserve2026}.
+
+Tobinov q je zato uporaben kot konceptualni okvir za presojo, ali večje investicije v 
+AI ustvarjajo dovolj pričakovane prihodnje vrednosti glede na stroške njihovega 
+ustvarjanja.
+
+
+
+
+
+% ==================================================
+
+\section{Zakaj je Tobinov q pri AI posebej zanimiv, vendar tudi omejen}
+
+% ==================================================
+
+Pri umetni inteligenci je nadomestitveno vrednost kapitala težje določiti kot pri fizičnih 
+sredstvih, saj velik del AI kapitala predstavljajo programska oprema, podatki, algoritmi, 
+raziskave in razvoj ter znanje zaposlenih. Ti elementi niso vedno v celoti prikazani v računovodskih 
+podatkih, zato lahko klasični Tobinov q daje nepopolno sliko vrednosti kapitala.
+Peters in Taylor (2017) ugotavljata, da vključitev neopredmetenega kapitala izboljša \citep{PetersTaylor2016} 
+razumevanje povezave med Tobinovim q in investicijami, zlasti pri podjetjih, kjer ima 
+neopredmeteni kapital pomembno vlogo. To je za AI posebej pomembno, saj so prav podatki, 
+programska oprema in raziskave pomemben del investicij. Andrei et al. (2019) prav tako 
+ugotavljajo, da je povezava med q in investicijami pomembna pri raziskovalno intenzivnih 
+podjetjih, kljub njihovemu večjemu deležu neopredmetenega kapitala \citep{AndreiMannMoyen2017}.
+Zato je Tobinov q pri AI najbolje uporabljati kot analitični okvir za proučevanje 
+investicij in pričakovane prihodnje vrednosti, ne pa kot samostojen dokaz, da so AI 
+investicije donosne.
+
+
+
+% ==================================================
+
+\section{Kaj nam Tobinov q pove o upravičenosti investicij v AI?}
+
+% ==================================================
+
+
+
+Tobinov q nam zato ne more dati enostavnega odgovora \textit{»da« ali »ne«} na vprašanje, 
+ali so pričakovanja donosov od AI upravičena. Lahko pa nam da jasen formalni okvir za 
+razmišljanje o tem vprašanju.
+
+Prvič, če je tržna vrednost podjetij, ki intenzivno investirajo v AI, bistveno višja od 
+nadomestitvene vrednosti njihovega kapitala, je q visok. To je skladno z idejo, da trg 
+pričakuje visoko prihodnjo vrednost tega kapitala. Takšno vrednotenje je lahko upravičeno, 
+če bodo AI investicije povzročile dovolj visoko rast prihodkov, produktivnosti in prihodnjih 
+denarnih tokov.
+
+Drugič, visoke investicije same po sebi še ne dokazujejo visoke donosnosti. Če podjetja 
+gradijo velike količine podatkovnih centrov in kupujejo drago računalniško infrastrukturo, 
+mora biti prihodnja uporaba te infrastrukture dovolj velika, da upraviči stroške. Federal 
+Reserve ugotavlja, da je bila v ZDA rast kapitalskih izdatkov v zadnjem obdobju močno 
+povezana prav z gradnjo infrastrukture za AI \citep{FederalReserve2026}.
+
+Tretjič, pri AI je posebej pomemben problem merjenja. Če del ustvarjenega kapitala 
+predstavljajo podatki, programska oprema, organizacijsko znanje in človeški kapital, 
+potem klasični izračun Tobinovega q ne zajame nujno celotne ekonomske vrednosti investicije. 
+Zato je pri AI q najbolje uporabljati kot \textbf{formalni merilni okvir}, ne kot popoln 
+samostojen kazalnik donosnosti.
+
+
+
+
+
+% ==================================================
+
+\section{Sklep}
+
+% ==================================================
+
+Tobinov q je uporaben okvir za razumevanje povezave med vrednostjo kapitala in investicijami. 
+Pri \(q>1\) imajo podjetja večjo spodbudo za investiranje, saj je pričakovana vrednost kapitala 
+višja od stroška njegove pridobitve. Pri AI je to še posebej zanimivo, saj velik del kapitala 
+predstavljajo neopredmetena sredstva, ki jih je težje meriti. Tobinov q zato ne pove neposredno, 
+ali bodo AI investicije donosne, temveč omogoča presojo, ali so tržna vrednotenja in 
+pričakovanja glede prihodnje vrednosti skladna z obsegom investicij.
+
+
+
+
+\begin{thebibliography}{99}
+
+\bibitem[Andrei et al.(2017)Andrei, Mann, and Moyen]{AndreiMannMoyen2017}
+Andrei, D., Mann, W. and Moyen, N. (2017).
+\textit{Why Did the q Theory of Investment Start Working?}
+Working paper, UCLA and University of Colorado.
+
+\bibitem[Peters and Taylor(2017)Peters and Taylor]{PetersTaylor2016}
+Peters, R. H. and Taylor, L. A. (2017).
+Intangible Capital and the Investment-q Relation.
+\textit{Journal of Financial Economics}, 123(2), 251--272.
+
+\bibitem[Stanford Institute for Human-Centered Artificial Intelligence(2026)Stanford Institute for Human-Centered Artificial Intelligence]{StanfordAIIndex2026}
+Stanford Institute for Human-Centered Artificial Intelligence (2026).
+\textit{The 2026 AI Index Report}.
+Stanford University.
+
+\bibitem[OECD(2026)Organisation for Economic Co-operation and Development]{OECD2026}
+Organisation for Economic Co-operation and Development (2026).
+\textit{Venture Capital Investments in Artificial Intelligence through 2025}.
+OECD.
+
+\bibitem[Federal Reserve(2026)Board of Governors of the Federal Reserve System]{FederalReserve2026}
+Board of Governors of the Federal Reserve System (2026).
+\textit{Monetary Policy Report}.
+Federal Reserve.
+
+\end{thebibliography}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
